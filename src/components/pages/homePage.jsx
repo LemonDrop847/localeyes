@@ -1,4 +1,5 @@
 import "./styles/homepage.css"
+import Foot from "../reuseable/footer";
 
 const Home = () => {
     return (  
@@ -56,6 +57,8 @@ const Home = () => {
   </div>
 </div>
 </section>
+
+<Foot/>
 
 </div>
     );
