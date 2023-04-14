@@ -1,8 +1,10 @@
 import "./styles/homepage.css"
+import Navbar from "../reuseable/navbar";
 
 const Home = () => {
     return (  
         <div>
+            <Navbar/>
            {/* <nav>
     <div className="menu">
       <div className="logo">
