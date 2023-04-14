@@ -1,5 +1,6 @@
 import "./styles/homepage.css"
 import Navbar from "../reuseable/navbar";
+import Foot from "../reuseable/footer";
 
 const Home = () => {
     return (  
@@ -58,6 +59,8 @@ const Home = () => {
   </div>
 </div>
 </section>
+
+<Foot/>
 
 </div>
     );
