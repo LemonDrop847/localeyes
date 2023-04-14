@@ -1,6 +1,6 @@
-const Cards = () => {
+const PostCard = () => {
     return <div>Hello world!</div>;
   };
   
-  export default Cards;
+  export default PostCard;
   
