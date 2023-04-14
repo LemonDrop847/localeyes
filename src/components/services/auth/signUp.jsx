@@ -8,20 +8,24 @@ const SignUp = () => {
     const [name,setName]=useState("");
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
+    const [location,setLocation]=useState("");
     const provider=new GoogleAuthProvider();
     const navigate= useNavigate();
     
     const signUpGoogle=()=>{
       signInWithPopup(auth, provider)
-      .then((user) => {
+      .then(({user}) => {
         setName(user.displayName);
-          setEmail(user.email);
-          setDoc(doc(db, "users", user.uid), {
-            name: user.displayName,
-            email: user.email,
-            profile: user.photoURL
-          });
-          console.log("Sign Up done")
+        setEmail(user.email);
+        setDoc(doc(db, "users", user.uid), {
+          name: user.displayName,
+          email: user.email,
+          photoURL: user.photoURL,
+          location:"",
+          posts:[]
+        });
+        console.log("Sign Up done")
+        navigate('/');
       }).catch((error) => {
         console.log(error.message);
       });
@@ -38,17 +42,16 @@ const SignUp = () => {
                 setDoc(doc(db, "users", auth.currentUser.uid), {
                   name: name,
                   email: email,
-                  photoURL: "https://i.postimg.cc/59Y74t0J/spiderman.png"
+                  photoURL: "https://i.postimg.cc/NG7RsZCV/user-1.png",
+                  location:location,
+                  posts:[]
                 });
                 console.log("added email: " + email);
                 console.log("displayName set: " + name);
+                console.log("user created successfully");
+                navigate('/');
             });
         })
-          .then(cred=>{
-            console.log("User Created:",cred.user);
-            navigate('/');
-            console.log("user created successfully");
-          })
           .catch(err=>{
             console.log(err.message);
           })
@@ -66,7 +69,10 @@ const SignUp = () => {
                 <label>Password:</label>
                 <input type="text" value={password} onChange={(e)=>setPassword(e.target.value)} required placeholder='Password'/>
                 <br />
-                <button type='submit'>Sign In</button>
+                <label>Location:</label>
+                <input type="text" value={location} onChange={(e)=>setLocation(e.target.value)} required placeholder='Location'/>
+                <br />
+                <button type='submit'>Sign Up</button>
             </form>
             <br />
             <div className="line"></div>
