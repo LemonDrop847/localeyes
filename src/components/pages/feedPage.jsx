@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import { useState, useEffect } from "react";
 import { onSnapshot, collection, orderBy } from "firebase/firestore";
 import {db} from "../services/firebase"
-import Cards from '../reuseable/postCards';
+import PostCard from '../reuseable/postCards';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Feed = () => {
     const [posts, setPosts] = useState([]);
@@ -36,7 +36,13 @@ const Feed = () => {
             />
             <Button variant="outline-success">Search</Button>
         </Form>
-        <Cards posts={posts}/>
+        <div className="row">
+        {posts.map((post) => (
+            <div className="col-3 postCard">
+            <PostCard key={post.id} posts={posts}/>
+            </div>
+        ))}
+        </div>
         </>
     );
 }
