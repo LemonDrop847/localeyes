@@ -1,5 +1,5 @@
 
-const Cards = (props) => {
+const PostCard = (props) => {
     const posts=props.posts;
     
     return (
@@ -27,5 +27,5 @@ const Cards = (props) => {
     );
   };
   
-  export default Cards;
+  export default PostCard;
   
