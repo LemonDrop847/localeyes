@@ -23,9 +23,7 @@ const SignIn = () => {
     const signIn=()=>{
       signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-          // Signed in 
           const user = userCredential.user;
-          // ...
           console.log(user);
           console.log("user logged in successfully")
           navigate('/');
