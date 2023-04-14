@@ -18,7 +18,7 @@ const Home = () => {
 
 <section>
 
-<h1> TOP POSTS FOR BMC </h1>
+<h1> TOP ISSUES TO BE ADDRESSED </h1>
 
 <div className="table">
   <div className="table-cell">
@@ -35,7 +35,7 @@ const Home = () => {
       <li>
         <span className="list_num">3</span>
         
-        <h2>Public Toilet Maintainance <span className="number">7,621</span></h2>
+        <h2>Public Toilet Maintenance <span className="number">7,621</span></h2>
       </li>
       <li>
         <span className="list_num">4</span>
