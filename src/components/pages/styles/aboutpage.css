@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    padding: 20px;
+}
+.aboutusContent{
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+.teamContainer{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    flex-wrap: wrap;
+}
+.teamContainer .cards{
+    width: 300px;
+    height: 390px;
+    padding: 60px 30px;
+    margin: 20px;
+    background: #768be0;
+    box-shadow: 0.6em 0.6em 1.2em #d2dce9;
+    border-radius: 20px;
+}
+.teamContainer .cards .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.teamContainer .cards .content .imgBox{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.teamContainer .cards .content .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.teamContainer .cards .content .contentBox h4{
+   color: #ffffff;
+   font-size: 1.3rem;
+   font-weight: 50px;
+   text-align: center;
+   letter-spacing: 0.5px;
+}
