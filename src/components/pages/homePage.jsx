@@ -1,24 +1,11 @@
 import "./styles/homepage.css"
-import Navbar from "../reuseable/navbar";
-import Foot from "../reuseable/footer";
+
+
 
 const Home = () => {
     return (  
         <div>
-            <Navbar/>
-           {/* <nav>
-    <div className="menu">
-      <div className="logo">
-        <img src="#" className="img1">
-      </div>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Statistics</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
-    </div>
-  </nav>
-   */}
+            
   <div className="img"></div>
   <div className="right">
     <div className="title">LocalEyes</div>
@@ -60,7 +47,7 @@ const Home = () => {
 </div>
 </section>
 
-<Foot/>
+
 
 </div>
     );
