@@ -1,4 +1,4 @@
-import {auth,db} from './firebase';
+import {auth,db} from '../firebase';
 import { doc, setDoc } from 'firebase/firestore';
 import {GoogleAuthProvider,signInWithPopup, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import {useNavigate} from "react-router-dom";
