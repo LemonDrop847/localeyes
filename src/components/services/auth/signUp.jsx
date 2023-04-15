@@ -1,41 +1,39 @@
 import {auth,db} from '../firebase';
 import { doc, setDoc } from 'firebase/firestore';
-import {GoogleAuthProvider,signInWithPopup, createUserWithEmailAndPassword, updateProfile, onAuthStateChanged } from "firebase/auth";
+import {GoogleAuthProvider,signInWithPopup, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import {useNavigate} from "react-router-dom";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Popup from '../../reuseable/popup';
 import SignIn from './signIn';
 
 const SignUp = () => {
-  const [buttonPopup,setButtonPopup] =useState(false);
-    const [name,setName]=useState("");
-    const [email,setEmail]=useState("");
-    const [password,setPassword]=useState("");
-    const [location,setLocation]=useState("");
+  const [buttonPopup, setButtonPopup] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [location, setLocation] = useState("");
+  const provider = new GoogleAuthProvider();
+  const navigate = useNavigate();
 
-    const [isLogin,setLogin]=useState(false);
-    const provider=new GoogleAuthProvider();
-    const navigate= useNavigate();
-    
-
-    const signUpGoogle=()=>{
-      signInWithPopup(auth, provider)
-      .then(({user}) => {
+  const signUpGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then(({ user }) => {
         setName(user.displayName);
         setEmail(user.email);
         setDoc(doc(db, "users", user.uid), {
           name: user.displayName,
           email: user.email,
           photoURL: user.photoURL,
-          location:"",
-          posts:[]
+          location: "",
+          posts: [],
         });
-        console.log("Sign Up done")
-        navigate('/');
-      }).catch((error) => {
+        console.log("Sign Up done");
+        navigate("/");
+      })
+      .catch((error) => {
         console.log(error.message);
       });
-    }
+  };
 
     const signUp=(e)=>{
         e.preventDefault();
@@ -62,18 +60,6 @@ const SignUp = () => {
             console.log(err.message);
           })
     }
-
-    useEffect(()=>{
-      onAuthStateChanged(auth,(user)=>{
-        if(user){
-          setLogin(true);
-          navigate('/feed');
-        }else{
-          setLogin(false)
-          console.log("no user")
-        }
-      })
-    },[auth])
     return ( 
         <div className="container">
             <form onSubmit={signUp}>
@@ -99,11 +85,9 @@ const SignUp = () => {
             <span >Sign Up using &nbsp;
             <img style={{maxWidth:"40px",maxHeight:"40px"}} onClick={signUpGoogle} src="https://i.postimg.cc/VkYvZMZJ/search.png" alt="" />
             </span>
-            {!isLogin &&
             <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
               <SignIn/>
             </Popup>
-            }
         </div>
      );
 }

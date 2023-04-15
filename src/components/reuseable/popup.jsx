@@ -1,5 +1,4 @@
 import "./styles/popup.css";
-import CloseButton from 'react-bootstrap/CloseButton';
 
 const Popup = (props) => {
     // console.log(props)
