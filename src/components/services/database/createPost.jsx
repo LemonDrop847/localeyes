@@ -10,7 +10,7 @@ import {
 } from "firebase/firestore";
 import { Form, Button, Carousel } from "react-bootstrap";
 // import Popup from "../components/popUp";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const CreatePost = () => {
   const [name, setName] = useState("");
@@ -18,7 +18,7 @@ const CreatePost = () => {
   const [location, setLocation] = useState("");
   const [images, setImages] = useState([]);
   const [previewUrls, setPreviewUrls] = useState([]);
-  const [buttonPopup, setButtonPopup] = useState(false);// new state variable
+  // const [buttonPopup, setButtonPopup] = useState(false);// new state variable
 
   const handleNameChange = (event) => {
     setName(event.target.value);
