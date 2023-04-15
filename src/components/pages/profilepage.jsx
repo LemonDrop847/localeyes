@@ -7,7 +7,6 @@ import { doc, getDoc } from "firebase/firestore";
 import { signOut } from "firebase/auth";
 import Popup from "../reuseable/popup";
 import UpdateProfile from "../services/auth/updateProfile";
-import { Button } from "react-bootstrap";
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -80,12 +79,13 @@ const Profile = () => {
           <div className="other">
             <h4>{user.location}</h4>
             <h4>{user.email}</h4>
-            <Button className='updateProf' onClick={() => setUpdateProf(true)}>
+            <button className='updateProf' onClick={() => setUpdateProf(true)}>
               Update Profile
-            </Button>
-            <Button className='signOut' onClick={userSignOut}>
+            </button>
+            <br />  
+            <button className='signOut' onClick={userSignOut}>
               Sign Out
-            </Button>
+            </button>
           </div>
         </div>
         <div>
