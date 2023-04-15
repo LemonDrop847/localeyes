@@ -9,16 +9,14 @@ import {
   arrayUnion,
 } from "firebase/firestore";
 import { Form, Button, Carousel } from "react-bootstrap";
-// import Popup from "../components/popUp";
-// import { Link } from "react-router-dom";
 
 const CreatePost = () => {
   const [name, setName] = useState("");
   const [caption, setCaption] = useState("");
   const [location, setLocation] = useState("");
+  const [type, setType] = useState("");
   const [images, setImages] = useState([]);
   const [previewUrls, setPreviewUrls] = useState([]);
-  // const [buttonPopup, setButtonPopup] = useState(false);// new state variable
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -30,6 +28,10 @@ const CreatePost = () => {
 
   const handleLocationChange = (event) => {
     setLocation(event.target.value);
+  };
+
+  const handleTypeChange = (event) => {
+    setType(event.target.value);
   };
 
   const handleImageChange = (event) => {
@@ -66,6 +68,7 @@ const CreatePost = () => {
       username: auth.currentUser.displayName,
       caption: caption,
       location: location,
+      type: type,
       images: imageUrls,
       likes: 0,
       timestamp: new Date().toISOString(),
@@ -80,6 +83,7 @@ const CreatePost = () => {
     setName("");
     setCaption("");
     setLocation("");
+    setType("");
     setImages([]);
     setPreviewUrls([]);
   };
@@ -107,15 +111,22 @@ const CreatePost = () => {
           />
         </Form.Group>
         <Form.Group>
-            <Form.Label>
-                Type:
-            </Form.Label>
-            <Form.Select aria-label="Default select example">
-                <option>---SELECT---</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </Form.Select>
+          <Form.Label>Select Type of Problem:</Form.Label>
+          <Form.Select
+            aria-label="Default select example"
+            value={type}
+            onChange={handleTypeChange}
+            required
+          >
+            <option>----SELECT----</option>
+            <option value="electricity">Electricity</option>
+            <option value="water">Water</option>
+            <option value="housing">Housing</option>
+            <option value="sanitation">Sanitation</option>
+            <option value="public safety">Public Safety</option>
+            <option value="food">Food</option>
+            <option value="other">Other</option>
+          </Form.Select>
         </Form.Group>
         <Form.Group controlId="caption">
           <Form.Label>Caption:</Form.Label>

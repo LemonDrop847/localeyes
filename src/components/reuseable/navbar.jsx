@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import "./styles/navbar.css";
-import Popup from './popup';
+import Popup from "./popup";
 import SignUp from "../services/auth/signUp";
 import { useState } from "react";
+import CreatePost from "../services/database/createPost";
 
 const Navbar = () => {
-  const [buttonPopup,setButtonPopup] =useState(false);
+  const [buttonPopup, setButtonPopup] = useState(false);
+  const [createPost, setCreatePost] = useState(false);
 
   return (
     <div className="navbar">
@@ -19,11 +21,18 @@ const Navbar = () => {
       </div>
       <div className="links">
         <Link to="/about">About us</Link>
-        <Link to="/feed">Create post</Link>
-        <Link to="/" onClick={()=>setButtonPopup(true)}>Sign Up</Link>
+        <Link to="/feed" onClick={() => setCreatePost(true)}>
+          Create post
+        </Link>
+        <Link to="/" onClick={() => setButtonPopup(true)}>
+          Sign Up
+        </Link>
       </div>
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <SignUp/>
+        <SignUp />
+      </Popup>
+      <Popup trigger={createPost} setTrigger={setCreatePost}>
+        <CreatePost />
       </Popup>
     </div>
   );
