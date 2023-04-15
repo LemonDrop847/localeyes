@@ -75,7 +75,7 @@ const SignIn = () => {
       <br />
       <h2>Or</h2>
       <span>
-        Sign Up using &nbsp;
+        Log In using &nbsp;
         <img
           style={{ maxWidth: "40px", maxHeight: "40px" }}
           onClick={signUpGoogle}

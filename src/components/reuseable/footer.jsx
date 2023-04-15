@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./styles/footer.css"
 
 
@@ -11,7 +10,7 @@ const Foot = () => {
 <div class="container">
     <div class="row">
         <div class="footer-col">
-            <img src="https://i.postimg.cc/yYTcM9K6/Screenshot-2023-04-14-190357-removebg-preview.png"></img>
+            <img src="https://i.postimg.cc/yYTcM9K6/Screenshot-2023-04-14-190357-removebg-preview.png" alt="logo"></img>
             <br/>
             <h4>Get involved, stay informed, make a difference.</h4>
         </div>

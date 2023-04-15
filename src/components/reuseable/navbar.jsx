@@ -5,7 +5,6 @@ import SignIn from "../services/auth/signIn";
 import { useState, useEffect } from "react";
 import CreatePost from "../services/database/createPost";
 import { auth } from "../services/firebase";
-import { signOut } from "firebase/auth";
 
 const Navbar = () => {
   const [buttonPopup, setButtonPopup] = useState(false);
