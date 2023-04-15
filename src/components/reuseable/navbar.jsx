@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import "./styles/navbar.css";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [popup,setPopup] =useState(false);
   return (
     <div className="navbar">
       <div>

@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { onSnapshot, collection, orderBy } from "firebase/firestore";
 import {db} from "../services/firebase"
 import PostCard from '../reuseable/postCards';
+import Card from '../reuseable/cards';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Feed = () => {
@@ -43,22 +44,7 @@ const Feed = () => {
             </div>
          ))}
         </div> */}
-        <div className="cardcontent">
-            <div className="card-title">
-              <h3>Soyam Prabha</h3>
-            </div>
-            <div className="card-body">
-                <p> " Recently due to these potholes a bike fell in front of my car and I almost went over his arm. It was a tragic incident but luckily I was able to hit the brakes in my car.  I would be grateful this issue is rectified. " </p>
-            </div>
-        </div>
-        <div className="btn">
-            <button>
-                <a>View More</a>
-            </button>
-        </div>
-        <div className="status-of-post">
-            <p> #1 trending </p>
-        </div>
+        <Card/>
     
         </>
     );
