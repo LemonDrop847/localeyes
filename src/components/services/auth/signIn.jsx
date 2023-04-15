@@ -2,9 +2,12 @@ import { GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 
 import {auth} from '../firebase'
 import {useNavigate} from "react-router-dom";
 import { useState } from 'react';
+import SignUp from './signUp';
+import Popup from '../../reuseable/popup';
 // import { doc, setDoc } from 'firebase/firestore';
 
 const SignIn = () => {
+  const [buttonPopup,setButtonPopup] =useState(false);
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const provider=new GoogleAuthProvider();
@@ -43,14 +46,19 @@ const SignIn = () => {
                 <label>Password:</label>
                 <input type="text" value={password} onChange={(e)=>setPassword(e.target.value)} required placeholder='Password'/>
                 <br />
-                <button type='submit'>Sign In</button>
+                <button type='submit' className="subm">Sign In</button>
+                <br />
+                <span>New user?</span>
+                <a href="#" onClick={()=>setButtonPopup(true)}>Click here</a>
             </form>
             <br />
-            <div className="line"></div>
             <h2>Or</h2>
-            <div className="line"></div>
-            <span>Sign Up using</span>
-            <img style={{maxWidth:"50px"}} onClick={signUpGoogle} src="https://i.postimg.cc/VkYvZMZJ/search.png" alt="" />
+            <span >Sign Up using &nbsp;
+            <img style={{maxWidth:"40px",maxHeight:"40px"}} onClick={signUpGoogle} src="https://i.postimg.cc/VkYvZMZJ/search.png" alt="" />
+            </span>
+            <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+              <SignUp/>
+            </Popup>
         </div>
      );
 }

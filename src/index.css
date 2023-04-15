@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.subm{
+  width: 120px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: rgb(179, 240, 240);
+  border: none;
+}
+.subm:hover{
+  border: 3px solid white;
+}
