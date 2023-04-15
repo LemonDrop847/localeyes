@@ -1,10 +1,15 @@
-import "./styles/PopUp.css";
+import "./styles/popup.css";
+import CloseButton from 'react-bootstrap/CloseButton';
+
 const Popup = (props) => {
+    console.log(props)
     return (props.trigger)? ( 
         <div className="popup">
             <div className="popup-inner">
-                <button className="close-btn" onClick={()=>props.setTrigger(false)} style={{}}>
-                    <img src="https://i.postimg.cc/SNbPfTKX/icons8-close-window-48.png" alt="" />
+                <button className="close-btn" onClick={()=>props.setTrigger(false)} style={{
+                    width:"50px"
+                }}>
+                    <img src="https://i.postimg.cc/Cxj6G8nY/icons8-cancel-48.png" style={{maxWidth:"50px",maxHeight:"50px"}} alt="" />
                 </button>
                 {props.children}
             </div>
@@ -12,4 +17,4 @@ const Popup = (props) => {
      ):"";
 }
  
-export default Popup;
+export default Popup; 

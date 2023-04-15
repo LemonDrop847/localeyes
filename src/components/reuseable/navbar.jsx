@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import "./styles/navbar.css";
+import Popup from './popup';
+import SignUp from "../services/auth/signUp";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [buttonPopup,setButtonPopup] =useState(false);
+
   return (
     <div className="navbar">
       <div>
@@ -15,8 +20,11 @@ const Navbar = () => {
       <div className="links">
         <Link to="/about">About us</Link>
         <Link to="/feed">Create post</Link>
-        <Link to="/">Sign Up</Link>
+        <Link to="/" onClick={()=>setButtonPopup(true)}>Sign Up</Link>
       </div>
+      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+        <SignUp/>
+      </Popup>
     </div>
   );
 };
