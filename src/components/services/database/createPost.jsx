@@ -49,10 +49,6 @@ const CreatePost = () => {
     setPreviewUrls(newUrls);
   };
 
-  // const handleEndgrChange = (event) => {
-  //   setIsEndgr(event.target.checked);
-  // };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -71,6 +67,7 @@ const CreatePost = () => {
       caption: caption,
       location: location,
       images: imageUrls,
+      likes: 0,
       timestamp: new Date().toISOString(),
     });
 
