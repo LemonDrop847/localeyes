@@ -24,32 +24,6 @@ const Navbar = () => {
     });
   }, []);
 
-  const userSignOut=()=>{
-    signOut(auth)
-      .then(()=>{
-        console.log("Sign Out!")
-        navigate('/');
-        window.location.reload()
-      }).catch(err=>{
-        console.log("kuch nahi")
-        console.log(err.message)
-      })
-  }
-
-  // useEffect(()=>{
-  //   onAuthStateChanged(auth,(user)=>{
-  //     if(user){
-  //       setName(user.displayName);
-  //       setUser(user)
-  //       setLogin(true);
-  //       navigate('/feed');
-  //     }else{
-  //       setUser(null);
-  //       setLogin(false)
-  //       console.log("no user")
-  //     }
-  //   })
-  // },[auth])
   return (
     <div className="navbar">
       <div>
