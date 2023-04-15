@@ -1,6 +1,23 @@
 import "./styles/homepage.css";
+import { auth } from "../services/firebase";
+import { useNavigate } from "react-router-dom";
+import { useState , useEffect } from "react";
+import Popup from "../reuseable/popup";
+import SignUp from "../services/auth/signUp";
 
 const Home = () => {
+  const [popup, setPopup] = useState(false);
+  const navigate = useNavigate();
+  const [user, setUser] = useState(false);
+  useEffect(() => {
+    auth.onAuthStateChanged(function (user) {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+  }, []);
   return (
     <div>
       <div className="img"></div>
@@ -10,9 +27,16 @@ const Home = () => {
           <p>Get involved, stay informed,</p>
           Make a difference
         </div>
-        <div className="btns">
-          <button>Join Us</button>
-        </div>
+        {user && (
+          <div className="btns">
+            <button onClick={() => navigate('/feed')}>Feed</button>
+          </div>
+        )}
+        {!user && (
+          <div className="btns">
+            <button onClick={() => setPopup(true)}>Join Us</button>
+          </div>
+        )}
       </div>
 
       <section>
@@ -53,6 +77,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Popup trigger={popup} setTrigger={setPopup}>
+        <SignUp />
+      </Popup>
     </div>
   );
 };

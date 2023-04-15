@@ -22,7 +22,7 @@ const About = () => {
         <div className="cards">
           <div className="content">
             <div className="imgBox">
-              <img src="https://i.postimg.cc/tRrFP53M/IMG-20230414-165917.jpg" />
+              <img src="https://i.postimg.cc/tRrFP53M/IMG-20230414-165917.jpg" alt="profile"/>
             </div>
             <div className="contentBox">
               <h4>Nitin Mishra</h4>
@@ -34,7 +34,7 @@ const About = () => {
         <div className="cards">
           <div className="content">
             <div className="imgBox">
-              <img src=" https://i.postimg.cc/MHh7B6CY/anil.jpg" />
+              <img src=" https://i.postimg.cc/MHh7B6CY/anil.jpg" alt="profile" />
             </div>
             <div className="contentBox">
               <h4>Anil Kumar Behera</h4>
@@ -46,7 +46,7 @@ const About = () => {
         <div className="cards">
           <div className="content">
             <div className="imgBox">
-              <img src="https://i.postimg.cc/7ZzBmcX6/meeee.jpg" />
+              <img src="https://i.postimg.cc/7ZzBmcX6/meeee.jpg" alt="profile" />
             </div>
             <div className="contentBox">
               <h4>Srusti Prusty</h4>
@@ -58,7 +58,7 @@ const About = () => {
         <div className="cards">
           <div className="content">
             <div className="imgBox">
-              <img src="https://i.postimg.cc/3RKQMpxP/IMG-20230304-104403-1.jpg" />
+              <img src="https://i.postimg.cc/3RKQMpxP/IMG-20230304-104403-1.jpg" alt="profile"/>
             </div>
             <div className="contentBox">
               <h4>Soyam Prabha Mallick</h4>

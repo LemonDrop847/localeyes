@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { collection, query, orderBy, where, getDocs } from "firebase/firestore";
 import { db } from "../services/firebase";
 import Card from "./cards";
+import './styles/cardlist.css'
 
 const CardList = ({ sort, type }) => {
   const [posts, setPosts] = useState([]);
@@ -24,7 +25,7 @@ const CardList = ({ sort, type }) => {
   }, [sort, type]);
 
   return (
-    <div>
+    <div className="card-list-container">
       {posts.length ? (
         posts.map((post) => <Card key={post.id} post={post} />)
       ) : (
