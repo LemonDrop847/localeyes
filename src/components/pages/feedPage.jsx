@@ -37,13 +37,12 @@ const Feed = () => {
             <Button variant="outline-success">Search</Button>
         </Form>
         <div className="row">
-        {posts.map((post) => (
-            <div className="col-3 postCard">
-            <PostCard key={post.id} posts={posts}/>
-            </div>
-        ))}
+        //{posts.map((post) => (
+        //    <div className="col-3 postCard">
+        //    <PostCard key={post.id} posts={posts}/>
+        //    </div>
+        // ))}
         </div>
-=======
             <div className="cardcontent">
             <div className="card-title">
               <h3>Soyam Prabha</h3>
