@@ -2,7 +2,7 @@ import "./styles/popup.css";
 import CloseButton from 'react-bootstrap/CloseButton';
 
 const Popup = (props) => {
-    console.log(props)
+    // console.log(props)
     return (props.trigger)? ( 
         <div className="popup">
             <div className="popup-inner">
