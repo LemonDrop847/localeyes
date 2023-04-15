@@ -62,7 +62,7 @@ const SignUp = () => {
     return ( 
         <div className="container">
             <form onSubmit={signUp}>
-                <h1>Sign Up to Your Account</h1>
+                <h2>Sign Up</h2>
                 <label>Name:</label>
                 <input type="text" value={name} onChange={(e)=>setName(e.target.value)} required placeholder='Your Name' />
                 <br />
