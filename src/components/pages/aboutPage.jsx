@@ -1,4 +1,5 @@
 import'./styles/aboutpage.css'
+
 const About = () => {
   return (
    <>
@@ -63,6 +64,8 @@ const About = () => {
           </div>
           </div>
         </div>
+
+      
       </div>
   
    </>
