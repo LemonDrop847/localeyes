@@ -61,9 +61,9 @@ const SignUp = () => {
           })
     }
     return ( 
-        <div className="container">
+        <div className="container" style={{backgroundColor:"white", width:"100%", padding:"0"}}>
             <form onSubmit={signUp}>
-                <h1>Sign Up to Your Account</h1>
+                <h1 style={{fontSize:"25px"}}>Sign Up to Your Account</h1>
                 <label>Name:</label>
                 <input type="text" value={name} onChange={(e)=>setName(e.target.value)} required placeholder='Your Name' />
                 <br />
@@ -76,14 +76,14 @@ const SignUp = () => {
                 <label>Location:</label>
                 <input type="text" value={location} onChange={(e)=>setLocation(e.target.value)} required placeholder='Location'/>
                 <br />
-                <button type='submit' className="subm">Sign Up</button>
+                <button type='submit' className="subm" style={{width:"75px", height:"40px"}}>Sign Up</button>
                 <br />
                 <span>Already an user?</span>
-                <a href="#" onClick={()=>setButtonPopup(true)}>Click here</a>
+                <a href="#" onClick={()=>setButtonPopup(true)} style={{color:"black", fontSize:"10px", marginLeft:"5px"}}> Click here </a>
             </form>
-            <h2>Or</h2>
+            <h4>Or</h4>
             <span >Sign Up using &nbsp;
-            <img style={{maxWidth:"40px",maxHeight:"40px"}} onClick={signUpGoogle} src="https://i.postimg.cc/VkYvZMZJ/search.png" alt="" />
+            <img style={{maxWidth:"20px",maxHeight:"20px"}} onClick={signUpGoogle} src="https://i.postimg.cc/VkYvZMZJ/search.png" alt="" />
             </span>
             <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
               <SignIn/>
