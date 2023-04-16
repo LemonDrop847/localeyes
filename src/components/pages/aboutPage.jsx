@@ -6,15 +6,10 @@ const About = () => {
       <h1> COMMUNITY-LED, PEOPLE-POWERED. </h1>
       <div className="aboutusContent">
         <p>
-          {" "}
-          Small in size, but mighty in purpose. LocalEyes is a team of
-          determined problem-solvers who are aim to address issues at their
-          core. Whether it's a problem with infrastructure, environmental
-          concerns, or community safety, LocalEyes is here to support users
-          every step of the way. We believe that everyone has a role to play in
-          creating positive change in their communities, and we are committed to
-          helping every citizen achieve that goal. We’ve worked hard to build a
-          company, where we do big things. We’re here to help you do the same.
+          Small in size but mighty in purpose. LocalEyes is a team of determined problem-solvers who aim to address issues at their core.
+          Whether it's a problem with infrastructure, environmental concerns, or community safety, LocalEyes is here to support users every step of the way. 
+          We believe that everyone has a role to play in creating positive change in their communities, and we are committed to helping every citizen achieve that goal.
+          We’ve worked hard to build a company where we do big things. We’re here to help you do the same.
         </p>
       </div>
       <h2> THE TEAM </h2>
