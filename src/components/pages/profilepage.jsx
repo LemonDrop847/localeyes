@@ -91,7 +91,7 @@ const Profile = () => {
         <div>
           <h1>My Posts</h1>
           <br />
-          <CardList sort="timestamp" type="all" />
+          <CardList sort="timestamp" type="all" user={auth.currentUser.uid} />
         </div>
       </div>
       <Popup trigger={updateProf} setTrigger={setUpdateProf}>

@@ -16,7 +16,7 @@ const Feed = () => {
         />
         <Button variant="outline-success">Search</Button>
       </Form>
-      <CardList sort="timestamp" type="all" />
+      <CardList sort="likes" type="all" user="all" />
     </>
   );
 };
