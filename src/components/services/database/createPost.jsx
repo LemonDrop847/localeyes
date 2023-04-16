@@ -7,6 +7,7 @@ import {
   addDoc,
   updateDoc,
   arrayUnion,
+  serverTimestamp,
 } from "firebase/firestore";
 import { Form, Button, Carousel } from "react-bootstrap";
 
@@ -71,7 +72,7 @@ const CreatePost = () => {
       type: type,
       images: imageUrls,
       likes: 0,
-      timestamp: new Date().toISOString(),
+      timestamp: serverTimestamp(),
     });
 
     const userRef = doc(db, "users", auth.currentUser.uid);
