@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles/card.css";
+import PopUp from './popup'
+import PostDetails from "./postDetails";
 
 const Card = ({ post }) => {
   const { id } = post;
+  const [showDetails,setShowDetails]=useState(false);
 
   return (
     <div className="myPost">
@@ -21,7 +24,7 @@ const Card = ({ post }) => {
           </div>
         </div>
         <div className="btn">
-          <button>
+          <button onClick={()=>setShowDetails(true)}>
             <Link>View More</Link>
           </button>
         </div>
@@ -29,6 +32,9 @@ const Card = ({ post }) => {
           <p>{post.likes} likes</p>
         </div>
       </div>
+      <PopUp trigger={showDetails} setTrigger={setShowDetails}>
+        <PostDetails postId={id}/>
+      </PopUp>
     </div>
   );
 };
