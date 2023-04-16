@@ -60,23 +60,13 @@
   .ipost-us {
     font-family: 'Montserrat';
     font-weight: 1300;
-    font-size: 30px;
+    font-size: 20px;
     position: absolute;
     margin-left: 15px;
     top: 30px;
     
   }
-  .ipost-us .cp-circle {
-    font-size: 1px;
-    position: absolute;
-    top: 6.5px;
-  }
-  .ipost-us f {
-    color: var(--lightblue);
-    margin-left: 6px;
-    font-size: 15px;
-    cursor: pointer;
-  }
+  
   
   .ipost-ds {
     width: 180px;
