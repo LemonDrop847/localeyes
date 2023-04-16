@@ -1,11 +1,11 @@
 .card-container {
   display: inline-block;
-  width: 300px;
+  width: 270px;
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px;
   transition: 0.3s;
   animation: ease-in;
-  background-color: #26a8ac;
+  background-color: #917FB3;
   border-radius: 20px;
 }
 .card-container:hover {
@@ -50,7 +50,7 @@ p {
   color: rgb(0, 0, 0);
 }
 .btn button:hover {
-  background: rgb(37, 76, 147);
+  background: #a19ea7;
   transform: scale(1.1);
 }
 a {

@@ -15,8 +15,9 @@ code {
   width: 120px;
   height: 48px;
   border-radius: 5px;
-  background-color: rgb(179, 240, 240);
+  background-color: #4f3879;
   border: none;
+  color: white;
 }
 .subm:hover{
   border: 3px solid white;

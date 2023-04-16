@@ -31,10 +31,11 @@
 .signOut{
   width: 120px;
   height: 48px;
-  background-color: rgb(248, 173, 173);
+  background-color: #4f3879;
   border: none;
   border-radius: 5px;
   margin: 5px;
+  color: white;
 }
 .updateProf{
   width: 120px;
@@ -42,13 +43,14 @@
   border: none;
   border-radius: 5px;
   margin: 5px;
-  background-color: rgb(173, 248, 248);
+  background-color: #a19ea7;
+  color: white;
 }
 .signOut:hover{
-  border: 3px solid rgb(164, 83, 83);
+  border: 3px solid #a19ea7;
 }
 .updateProf:hover{
-  border: 3px solid rgb(83, 129, 164);
+  border: 3px solid #4f3879;
 }
 .myPost {
   flex: 1;
