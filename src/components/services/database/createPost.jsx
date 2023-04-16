@@ -89,7 +89,7 @@ const CreatePost = () => {
   };
 
   return (
-    <div style={{ height: "400px", overflowY: "scroll", overflowX: "hidden" }}>
+    <div >
       <h3>Create Post</h3>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="name">
