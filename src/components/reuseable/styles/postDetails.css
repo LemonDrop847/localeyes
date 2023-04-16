@@ -1,0 +1,139 @@
+:root {
+    --blue: #084ff9;
+    --purple: #882ce7;
+    --pink: #ff1193;
+    --red: #fc2640;
+    --yellow: #ffc548;
+    --yellow2: #ffe586;
+    --lightblue: #2e99eb;
+    --tags: #42778e;
+  }
+  #ipost {
+    width: 800px;
+    height: 500px;
+    position: relative;
+   /* margin-top: 300px; */
+   /* margin-left: 500px; */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #cbcbcb;
+    color: black;
+  }
+  #ipost img {
+    position: absolute;
+    left: 0px;
+    width: 480px;
+    height: 500px;
+  }
+  .ipost-a {
+    width: 320px;
+    height: 500px;
+    position: absolute;
+    background: white;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  .iprofile {
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    background: black;
+    border-radius: 50%;
+    top: 20px;
+    left: 30px;
+  }
+  .iprofile .profim {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    left: 0px;
+    top: 0px;
+    margin-top: 3px;
+    margin-left: 3.5px;
+    border: 3px solid white;
+    background: white;
+  }
+  .ipost-us {
+    font-family: 'Montserrat';
+    font-weight: 1300;
+    font-size: 30px;
+    position: absolute;
+    margin-left: 15px;
+    top: 30px;
+    
+  }
+  .ipost-us .cp-circle {
+    font-size: 1px;
+    position: absolute;
+    top: 6.5px;
+  }
+  .ipost-us f {
+    color: var(--lightblue);
+    margin-left: 6px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .ipost-ds {
+    width: 180px;
+    height: 300px;
+    position: absolute;
+    border-top: 1px solid #cdcdcd;
+    padding-top: 8px;
+    top: 70px;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    line-height: 110%;
+  }
+  .ipost-ds tg {
+    color: var(--tags);
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .ipost-a .ipost-com {
+    width: 180px;
+    position: absolute;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    bottom: 0px;
+    border-top: 1px solid #cdcdcd;
+    color: gray;
+    line-height: 130%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .ipost-sm {
+    width: 240px;
+    font-size: 25px;
+    position: absolute;
+    bottom: 48px;
+    border-top: 1px solid #cdcdcd;
+    padding-top: 8px;
+    align-items: center;
+  }
+  .ipost-sm i {
+    line-height: 150%;
+    cursor: pointer;
+  }
+  
+  .ipost-sm button{
+    font-weight: 900;
+    font-family: 'Calibri';
+    font-size: 14px;
+    line-height: 100%;
+    display: block;
+    width: 130px;
+    height: 40px;
+   
+  }
+  .ipost-sm p {
+    font-family: 'Calibri';
+    text-transform: uppercase;
+    font-size: 8px;
+    line-height: 100%;
+    position: absolute;
+  }
