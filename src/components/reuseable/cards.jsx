@@ -22,7 +22,7 @@ const Card = ({ post }) => {
         </div>
         <div className="btn">
           <button>
-            <Link to={`/details/${id}`}>View More</Link>
+            <Link>View More</Link>
           </button>
         </div>
         <div className="status-of-post">
