@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import "./styles/navbar.css";
 import Popup from "./popup";
 import SignIn from "../services/auth/signIn";
@@ -9,7 +9,7 @@ import { auth } from "../services/firebase";
 const Navbar = () => {
   const [buttonPopup, setButtonPopup] = useState(false);
   const [createPost, setCreatePost] = useState(false);
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(null);
   useEffect(() => {
     auth.onAuthStateChanged(function (user) {
       if (user) {
