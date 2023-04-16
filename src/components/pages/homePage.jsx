@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import Popup from "../reuseable/popup";
 import CardList from "../reuseable/cardList";
 import SignUp from "../services/auth/signUp";
-import { createBootstrapComponent } from "react-bootstrap/esm/ThemeProvider";
 
 const Home = () => {
   const [popup, setPopup] = useState(false);
