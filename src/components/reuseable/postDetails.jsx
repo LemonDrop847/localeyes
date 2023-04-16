@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../services/firebase";
+import "./styles/postDetails.css"
 
 const PostDetails = ({ postId }) => {
   const [post, setPost] = useState(null);
@@ -37,21 +38,39 @@ const PostDetails = ({ postId }) => {
   }
 
   return (
-    <div>
-      <h2>{post.name}</h2>
-      <p>{post.caption}</p>
-      <div>
-        {post.images.map((imageUrl, index) => (
-          <img
-            key={index}
-            src={imageUrl}
-            alt={`Post ${index}`}
-            style={{ height: 100, width: 100 }}
-          />
-        ))}
+    // <div>
+    //   <h2>{post.name}</h2>
+    //   <p>{post.caption}</p>
+    //   <div>
+    //     {post.images.map((imageUrl, index) => (
+    //       <img
+    //         key={index}
+    //         src={imageUrl}
+    //         alt={`Post ${index}`}
+    //         style={{ height: 100, width: 100 }}
+    //       />
+    //     ))}
+    //   </div>
+    //   <button onClick={handleLike}>Like ({likes})</button>
+    // </div>
+
+    <div id="ipost"><img src={post.images[0]}/>
+  
+    <div className="ipost-a">
+      
+      {/* <div className="iprofile"><div className="profim" style={{background: url("https://images2.imgbox.com/6d/f8/ZapuXuvR_o.png")}}></div></div> */}
+      <div className="ipost-us">{post.name} <span className="cp cp-circle"></span> <f>Follow</f><br/></div>
+      <div className="ipost-ds"><b>{post.username}</b> <br/> {post.caption}</div>
+      <div className="ipost-sm">
+        
+        <br/>
+        <button onClick={handleLike}>Report again ({likes})</button>
+        <p>{Date(post.timestamp).toString()}</p>
       </div>
-      <button onClick={handleLike}>Like ({likes})</button>
-    </div>
+      
+    
+</div>
+</div>
   );
 };
 
