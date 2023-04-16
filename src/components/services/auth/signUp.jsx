@@ -3,33 +3,37 @@ import { doc, setDoc } from 'firebase/firestore';
 import {GoogleAuthProvider,signInWithPopup, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import {useNavigate} from "react-router-dom";
 import { useState } from 'react';
+import Popup from '../../reuseable/popup';
+import SignIn from './signIn';
 
 const SignUp = () => {
-    const [name,setName]=useState("");
-    const [email,setEmail]=useState("");
-    const [password,setPassword]=useState("");
-    const [location,setLocation]=useState("");
-    const provider=new GoogleAuthProvider();
-    const navigate= useNavigate();
-    
-    const signUpGoogle=()=>{
-      signInWithPopup(auth, provider)
-      .then(({user}) => {
+  const [buttonPopup, setButtonPopup] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [location, setLocation] = useState("");
+  const provider = new GoogleAuthProvider();
+  const navigate = useNavigate();
+
+  const signUpGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then(({ user }) => {
         setName(user.displayName);
         setEmail(user.email);
         setDoc(doc(db, "users", user.uid), {
           name: user.displayName,
           email: user.email,
           photoURL: user.photoURL,
-          location:"",
-          posts:[]
+          location: "",
+          posts: [],
         });
-        console.log("Sign Up done")
-        navigate('/');
-      }).catch((error) => {
+        console.log("Sign Up done");
+        navigate("/");
+      })
+      .catch((error) => {
         console.log(error.message);
       });
-    }
+  };
 
     const signUp=(e)=>{
         e.preventDefault();
@@ -72,14 +76,18 @@ const SignUp = () => {
                 <label>Location:</label>
                 <input type="text" value={location} onChange={(e)=>setLocation(e.target.value)} required placeholder='Location'/>
                 <br />
-                <button type='submit'>Sign Up</button>
+                <button type='submit' className="subm">Sign Up</button>
+                <br />
+                <span>Already an user?</span>
+                <a href="#" onClick={()=>setButtonPopup(true)}>Click here</a>
             </form>
-            <br />
-            <div className="line"></div>
             <h2>Or</h2>
-            <div className="line"></div>
-            <span>Sign Up using</span>
-            <img style={{maxWidth:"50px"}} onClick={signUpGoogle} src="https://i.postimg.cc/VkYvZMZJ/search.png" alt="" />
+            <span >Sign Up using &nbsp;
+            <img style={{maxWidth:"40px",maxHeight:"40px"}} onClick={signUpGoogle} src="https://i.postimg.cc/VkYvZMZJ/search.png" alt="" />
+            </span>
+            <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+              <SignIn/>
+            </Popup>
         </div>
      );
 }

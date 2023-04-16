@@ -1,9 +1,25 @@
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import "./styles/navbar.css";
-import { useState } from "react";
+import Popup from "./popup";
+import SignIn from "../services/auth/signIn";
+import { useState, useEffect } from "react";
+import CreatePost from "../services/database/createPost";
+import { auth } from "../services/firebase";
 
 const Navbar = () => {
-  const [popup,setPopup] =useState(false);
+  const [buttonPopup, setButtonPopup] = useState(false);
+  const [createPost, setCreatePost] = useState(false);
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    auth.onAuthStateChanged(function (user) {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+  }, []);
+
   return (
     <div className="navbar">
       <div>
@@ -16,9 +32,22 @@ const Navbar = () => {
       </div>
       <div className="links">
         <Link to="/about">About us</Link>
-        <Link to="/feed">Create post</Link>
-        <Link to="/">Sign Up</Link>
+        <Link onClick={() => setCreatePost(true)}>Create post</Link>
+        <div className="user">
+          {user && (
+            <Link to="/profile">
+              <img id="user" src={user.photoURL} alt="" />
+            </Link>
+          )}
+          {!user && <Link onClick={() => setButtonPopup(true)}>Sign In</Link>}
+        </div>
       </div>
+      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+        <SignIn />
+      </Popup>
+      <Popup trigger={createPost} setTrigger={setCreatePost}>
+        <CreatePost />
+      </Popup>
     </div>
   );
 };
