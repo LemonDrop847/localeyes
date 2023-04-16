@@ -68,16 +68,16 @@ const SignIn = () => {
         </button>
         <br />
         <span>New user?</span>
-        <a href="#" onClick={() => setButtonPopup(true)}>
+        <a href="#" onClick={() => setButtonPopup(true)} style={{color:"black", fontSize:"15px"}}>
           Click here
         </a>
       </form>
-      <br />
-      <h2>Or</h2>
+
+      <h4>Or</h4>
       <span>
         Log In using &nbsp;
         <img
-          style={{ maxWidth: "40px", maxHeight: "40px" }}
+          style={{ maxWidth: "25px", maxHeight: "25px" }}
           onClick={signUpGoogle}
           src="https://i.postimg.cc/VkYvZMZJ/search.png"
           alt=""
