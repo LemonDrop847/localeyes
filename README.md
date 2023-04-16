@@ -18,7 +18,7 @@
 - Replit - [https://replit.com/@lemondrop847/localeyes](https://replit.com/@lemondrop847/localeyes)
 
 ## Demo Video
-Demo for the Platform- [Youtube](http://localeyes.vercel.app)
+Demo for the Platform- [Youtube](https://youtu.be/g7xvPHPXZFE)
 
 ## Development Instructions
 Requirements-
