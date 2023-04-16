@@ -71,7 +71,7 @@ const Profile = () => {
       <div className="stuff">
         <div className="details">
           <div className="image">
-            <img src={user.photoURL} alt="Profileimage" />
+            <img src={user.photoURL} alt="Profileimage"/>
           </div>
           <div className="name">
             <h1>{user.name}</h1>

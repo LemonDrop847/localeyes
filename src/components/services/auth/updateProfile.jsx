@@ -44,6 +44,7 @@ const UpdateProfile = ({ name, location }) => {
 
   return (
     <Form onSubmit={handleSubmit}>
+      <h2>Update Profile</h2>
       <Form.Group>
         <Form.Label>Name:</Form.Label>
         <Form.Control
@@ -66,9 +67,9 @@ const UpdateProfile = ({ name, location }) => {
         <Form.Label>Profile Photo:</Form.Label>
         <Form.Control type="file" onChange={handlePhotoUpload} />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <button  type="submit" className="subm" style={{width:"75px", height:"40px"}} >
         Submit
-      </Button>
+      </button>
       {success && <h2>Profile Updated</h2>}
     </Form>
   );
