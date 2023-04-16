@@ -27,7 +27,7 @@ h1{
     height: 390px;
     padding: 60px 30px;
     margin: 20px;
-    background: #768be0;
+    background: #917FB3;
     box-shadow: 0.6em 0.6em 1.2em #d2dce9;
     border-radius: 20px;
 }
@@ -55,7 +55,7 @@ h1{
 
 }
 .teamContainer .cards .content .contentBox h4{
-   color: #ffffff;
+   color: black;
    font-size: 1.3rem;
    font-weight: 50px;
    text-align: center;

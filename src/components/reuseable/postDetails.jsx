@@ -60,7 +60,7 @@ const PostDetails = ({ postId }) => {
       <div className="ipost-a">
         {/* <div className="iprofile"><div className="profim" style={{background: url("https://images2.imgbox.com/6d/f8/ZapuXuvR_o.png")}}></div></div> */}
         <div className="ipost-us">
-          {post.name} <span className="cp cp-circle"></span> <f>Follow</f>
+          {post.name}  
           <br />
         </div>
         <div className="ipost-ds">
