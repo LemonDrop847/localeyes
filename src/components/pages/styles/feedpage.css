@@ -15,11 +15,12 @@
     justify-content: center;
 }
 .searchbar button{
-    background-color: rgb(67, 125, 232);
-    color: white;
+    padding: 5px;
+    background-color: #049A9E;
+    color: rgb(245, 245, 245);
     text-transform: uppercase;
     font-weight: bold;
 }
 .searchbar button:hover{
-    background-color: rgb(37, 76, 147);
+    background-color: #78dde1;
 }
