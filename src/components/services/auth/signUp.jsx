@@ -61,7 +61,7 @@ const SignUp = () => {
           })
     }
     return ( 
-        <div className="container" style={{backgroundColor:"white", width:"100%", padding:"0"}}>
+        <div className="container" style={{ width:"100%", padding:"0"}}>
             <form onSubmit={signUp}>
                 <h1 style={{fontSize:"25px"}}>Sign Up to Your Account</h1>
                 <label>Name:</label>
