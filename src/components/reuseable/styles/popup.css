@@ -20,6 +20,8 @@
     border-radius: 8px;
     color: black;
     background-color: #85b6b2;
+    overflow-y: scroll;
+    scrollbar-width: thin;
 }
 .popup-inner .close-btn{
     border: none;
