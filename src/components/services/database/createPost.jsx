@@ -129,7 +129,9 @@ const CreatePost = () => {
             <option value="other">Other</option>
           </Form.Select>
         </Form.Group>
+        <br/>
         <Form.Group controlId="caption">
+      
           <Form.Label>Caption:</Form.Label>
           <Form.Control
             style={{ height: "70px" }}
@@ -172,9 +174,9 @@ const CreatePost = () => {
             ))}
           </Carousel>
         )}
-        <Button variant="primary" type="submit">
+        <button type="submit" className="subm" style={{width:"75px", height:"40px", marginTop:"10px"}}>
           Post
-        </Button>
+        </button>
       </Form>
     </div>
   );
