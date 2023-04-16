@@ -5,7 +5,7 @@
   box-shadow: 0px 0px 15px -5px;
   transition: 0.3s;
   animation: ease-in;
-  background-color: rgb(149, 186, 241);
+  background-color: #26a8ac;
   border-radius: 20px;
 }
 .card-container:hover {
@@ -43,11 +43,11 @@ p {
 }
 .btn button {
   padding: 0.5rem;
-  background-color: rgb(67, 125, 232);
+  background-color: rgb(247, 250, 255);
   border: none;
   transition: 0.2s;
   border-radius: 3px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .btn button:hover {
   background: rgb(37, 76, 147);
@@ -56,7 +56,7 @@ p {
 a {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: bold;
 }
