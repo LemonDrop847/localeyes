@@ -95,7 +95,7 @@ const Profile = () => {
         </div>
       </div>
       <Popup trigger={updateProf} setTrigger={setUpdateProf}>
-        <UpdateProfile name={user.name} location={user.location} />
+        <UpdateProfile name={user.name} location={user.location} photoURL={user.photoURL} />
       </Popup>
     </div>
   );
