@@ -71,7 +71,7 @@ const SignUp = () => {
                 <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} required placeholder='Email' />
                 <br />
                 <label>Password:</label>
-                <input type="text" value={password} onChange={(e)=>setPassword(e.target.value)} required placeholder='Password'/>
+                <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} required placeholder='Password'/>
                 <br />
                 <label>Location:</label>
                 <input type="text" value={location} onChange={(e)=>setLocation(e.target.value)} required placeholder='Location'/>

@@ -56,7 +56,7 @@ const SignIn = () => {
         <br />
         <label>Password:</label>
         <input
-          type="text"
+          type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
