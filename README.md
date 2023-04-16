@@ -21,6 +21,13 @@
 Demo for the Platform- [Youtube](http://localeyes.vercel.app)
 
 ## Development Instructions
+Requirements-
+- Node.js v18.x+
+
+Run in terminal at the root directory of project.
+### `npm i`
+
+Gets All the required packages.
 
 ### `npm start`
 
