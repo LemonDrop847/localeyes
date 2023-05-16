@@ -7,7 +7,7 @@ const Foot = () => {
 <div className="container">
     <div className="row">
         <div className="footer-col">
-            <img src="https://i.postimg.cc/yYTcM9K6/Screenshot-2023-04-14-190357-removebg-preview.png"></img>
+            <img alt="logo" src="https://i.postimg.cc/yYTcM9K6/Screenshot-2023-04-14-190357-removebg-preview.png"></img>
             <br/>
             <h4>Get involved, stay informed, make a difference.</h4>
         </div>
